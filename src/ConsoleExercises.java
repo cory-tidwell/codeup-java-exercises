@@ -12,9 +12,9 @@ public class ConsoleExercises {
 //        System.out.print("Enter an number: ");
 
 
-        String input1;
-        String input2;
-        String input3;
+//        String input1;
+//        String input2;
+//        String input3;
 //
         Scanner scanner = new Scanner(System.in);
 //        System.out.printf("Enter three words: ");
@@ -35,10 +35,12 @@ public class ConsoleExercises {
         String widthInput = scanner.nextLine();
         System.out.println("Enter the length of your room: ");
         String lengthInput = scanner.nextLine();
-        int area = Integer.valueOf(widthInput) * (Integer.valueOf(lengthInput));
-        int perimeter =  (Integer.valueOf(widthInput) * 2) + (Integer.valueOf(lengthInput) * 2);
+
+        int roomArea = Integer.valueOf(widthInput) * (Integer.valueOf(lengthInput));
+        int roomPerimeter =  (Integer.valueOf(widthInput) * 2) + (Integer.valueOf(lengthInput) * 2);
+
         System.out.printf("The width entered was %s, the length entered was %s.", widthInput, lengthInput);
-        System.out.printf("\nThe area of the room is %s, the perimeter is %s.", area, perimeter);
+        System.out.printf("\nThe area of the room is %s, the perimeter is %s.", roomArea, roomPerimeter);
 
     }
 }
