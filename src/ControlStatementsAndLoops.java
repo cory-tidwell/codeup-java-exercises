@@ -1,6 +1,4 @@
-import java.util.Scanner;
-
-public class ControlStamentsAndLoops {
+public class ControlStatementsAndLoops {
     public static void main(String[] args) {
 //        double discountPercent;
 //        char letter = 'y';
