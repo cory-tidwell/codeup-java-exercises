@@ -2,18 +2,22 @@ import java.util.Scanner;
 
 public class Bob {
     public static void main(String[] args) {
+        String userInput;
+        do{
         Scanner scanner = new Scanner(System.in);
         System.out.println("*Lackadaisical Bob*");
-        String userInput = scanner.nextLine();
+        userInput = scanner.nextLine();
 
-        if(userInput.endsWith("?")){
+        if (userInput.endsWith("?")) {
             System.out.println("Sure");
-        }else if(userInput.endsWith("!")){
+        } else if (userInput.endsWith("!")) {
             System.out.println("Woah, Chill out!");
-        }else if(userInput.equals("")){
+        } else if (userInput.equals("")) {
             System.out.println("Fine. be that way!");
-        }else{
+        } else {
             System.out.println("Whatever");
         }
+        } while(!userInput.equals("bye"));
     }
 }
+
