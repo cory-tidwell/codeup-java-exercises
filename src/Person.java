@@ -3,7 +3,7 @@ public class Person {
         private String name;
         private int age;
 
-        public Person(String name, int age) {
+        public Person(String name) {
             this.name = name;
             this.age = age;
         }
@@ -40,7 +40,7 @@ public class Person {
 //        person1 = person3;
 //        System.out.println(person2 == person1);
 
-            Person person1 = new Person("John", 36);
+            Person person1 = new Person("John");
             Person person2 = person1;
             System.out.println(person1.getName());
             System.out.println(person2.getName());
