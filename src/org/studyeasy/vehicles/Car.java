@@ -3,9 +3,9 @@ package org.studyeasy.vehicles;
 import org.studyeasy.parent.Vehicle;
 
 public class Car extends Vehicle {
-    public String steering;
-    public String musicSystem;
-    public String air_conditioner;
-    public String fridge;
-    public String entertainment_System;
+    private String steering;
+    private String musicSystem;
+    private String air_conditioner;
+    private String fridge;
+    private String entertainment_System;
 }
