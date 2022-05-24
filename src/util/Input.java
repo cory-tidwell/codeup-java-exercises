@@ -1,6 +1,5 @@
 package util;
 
-import java.net.SocketOption;
 import java.util.Scanner;
 
 public class Input {
@@ -36,13 +35,13 @@ public class Input {
         }
     }
 
-    public int getInt(int min, int max){
+    public int getInt(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number between 1 and 10: ");
         int num = scanner.nextInt();
         if (num < 10 && num > 1){
             return num;
-        }else return getInt(min, max);
+        }else return getInt();
     }
 
     public double getDouble(double min, double max){
