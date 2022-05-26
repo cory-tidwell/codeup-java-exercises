@@ -2,10 +2,10 @@ package shapes;
 
 public class Square extends Quadrilateral{
 
-    Square(int side){
+    public Square(int side){
         super(side, side);
     }
-//    public double side;
+    public double side;
 //
 //    public void Square(double side) {
 //        this.side = side;
