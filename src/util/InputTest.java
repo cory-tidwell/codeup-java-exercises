@@ -6,6 +6,6 @@ public class InputTest {
         userInput.getString();
         userInput.yesNo();
         userInput.getInt();
-        userInput.getDouble(1, 10);
+        userInput.getDouble();
     }
 }

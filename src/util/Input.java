@@ -36,21 +36,63 @@ public class Input {
     }
 
     public int getInt(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a number between 1 and 10: ");
-        int num = scanner.nextInt();
-        if (num < 10 && num > 1){
-            return num;
-        }else return getInt();
+        System.out.println("Please enter a random number: ");
+
+        int getRandomIntInput = 0;
+
+        String userInput = scanner.next();
+
+        try {
+            getRandomIntInput = Integer.valueOf(userInput);
+
+        } catch (Exception e) {
+
+            getInt();
+
+        }
+
+        return getRandomIntInput;
+
     }
 
-    public double getDouble(double min, double max){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a number between 1 and 10: ");
-        double num = scanner.nextDouble();
-        if (num < 10 && num > 1){
-            return num;
-        }else return getDouble(min, max);
+    public double getDouble(){
+
+        System.out.println("Please enter a random number with a floating point: ");
+
+        double getRandomDoubleInput = 0.0;
+
+        String userInput = scanner.next();
+
+        try {
+
+            getRandomDoubleInput = Double.valueOf(userInput);
+
+        }catch (Exception e){
+
+            getDouble();
+
+        }
+
+        return getRandomDoubleInput;
+
     }
+
+//    public int getInt(){
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter a number between 1 and 10: ");
+//        int num = scanner.nextInt();
+//        if (num < 10 && num > 1){
+//            return num;
+//        }else return getInt();
+//    }
+//
+//    public double getDouble(double min, double max){
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Enter a number between 1 and 10: ");
+//        double num = scanner.nextDouble();
+//        if (num < 10 && num > 1){
+//            return num;
+//        }else return getDouble(min, max);
+//    }
 
 }
