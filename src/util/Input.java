@@ -61,6 +61,7 @@ public class Input {
 
         double getRandomDoubleInput = 0.0;
 
+
         String userInput = scanner.next();
 
         try {

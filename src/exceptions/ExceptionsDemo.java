@@ -1,6 +1,7 @@
 package exceptions;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class ExceptionsDemo {
 
@@ -16,11 +17,13 @@ public class ExceptionsDemo {
 
     private static void share() throws FileNotFoundException {
         System.out.println("\nInside share ...");
-      //  try {
-            HttpConnect.send(0, "hello", "http://www.goodsnips.com");
-     //   } catch (FileNotFoundException e) {
-      //      e.printStackTrace();
-      //  }
+        try {
+            HttpConnect.send(1, "hello", "http://www.goodsnips.com");
+        } catch (FileNotFoundException e) {
+            throw e;
+        } catch (IOException e) {
+            System.out.println("Connection to a different server ...");;
+        }
         System.out.println("\nEnd of share ...");
     }
 }
