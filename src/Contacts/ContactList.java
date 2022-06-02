@@ -15,7 +15,9 @@ public class ContactList extends ContactManager {
     public static void displayAllContacts() throws IOException {
         List<String> contacts = Files.readAllLines(filepath);
         System.out.println(contacts);
+        System.out.println("-------------------------");
 
+        menu();
     }
 
     public static void addContact() throws IOException {

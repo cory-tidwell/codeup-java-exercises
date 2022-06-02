@@ -1,5 +1,4 @@
 package util;
-
 import java.util.Scanner;
 
 public class Input {
@@ -10,9 +9,9 @@ public class Input {
     }
 
     public String getString() {
-        System.out.println("What did you eat for dinner? ");
+//        System.out.println("What did you eat for dinner? ");
         String userInput = scanner.nextLine();
-        System.out.println(userInput + " tastes like crap!");
+//        System.out.println(userInput + " tastes like crap!");
         return userInput;
     }
 
@@ -24,9 +23,9 @@ public class Input {
     }
 
     public boolean yesNo() {
-        System.out.println("Did you enjoy dinner last night? (yes/no) ");
+//        System.out.println("Did you enjoy dinner last night? (yes/no) ");
         String userInput = scanner.next();
-        if(userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
+        if (userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
             System.out.println(true);
             return true;
         } else {
@@ -35,48 +34,107 @@ public class Input {
         }
     }
 
-    public int getInt(){
-        System.out.println("Please enter a random number: ");
-
-        int getRandomIntInput = 0;
-
-        String userInput = scanner.next();
-
+    public int getInt() {
+        System.out.print("Enter a number ");
+        int input = 0;
         try {
-            getRandomIntInput = Integer.valueOf(userInput);
-
+            input = Integer.parseInt(getString());
         } catch (Exception e) {
-
+            System.out.println("Invalid input.\n");
             getInt();
-
         }
-
-        return getRandomIntInput;
-
+        return input;
     }
 
-    public double getDouble(){
-
-        System.out.println("Please enter a random number with a floating point: ");
-
-        double getRandomDoubleInput = 0.0;
-
-
-        String userInput = scanner.next();
-
+    public int getInt(String prompt) {
+        System.out.print(prompt);
+        int input = 0;
         try {
-
-            getRandomDoubleInput = Double.valueOf(userInput);
-
-        }catch (Exception e){
-
-            getDouble();
-
+            input = Integer.parseInt(getString());
+        } catch (Exception e) {
+            System.out.println("Invalid input \n");
+            getInt();
         }
-
-        return getRandomDoubleInput;
-
+        return input;
     }
+}
+//import java.util.Scanner;
+//
+//public class Input {
+//    private Scanner scanner;
+//
+//    public Input() {
+//        scanner = new Scanner(System.in);
+//    }
+//
+//    public String getString() {
+//        System.out.println("What did you eat for dinner? ");
+//        String userInput = scanner.nextLine();
+//        System.out.println(userInput + " tastes like crap!");
+//        return userInput;
+//    }
+//
+//    public String getString(String prompt) {
+//        System.out.println("What did you eat for dinner? ");
+//        String userInput = scanner.nextLine();
+//        System.out.println(userInput + " tastes like crap!");
+//        return userInput;
+//    }
+//
+//    public boolean yesNo() {
+//        System.out.println("Did you enjoy dinner last night? (yes/no) ");
+//        String userInput = scanner.next();
+//        if(userInput.equalsIgnoreCase("y") || userInput.equalsIgnoreCase("yes")) {
+//            System.out.println(true);
+//            return true;
+//        } else {
+//            System.out.println(false);
+//            return false;
+//        }
+//    }
+//
+//    public int getInt(){
+//        System.out.println("Please enter a random number: ");
+//
+//        int getRandomIntInput = 0;
+//
+//        String userInput = scanner.next();
+//
+//        try {
+//            getRandomIntInput = Integer.valueOf(userInput);
+//
+//        } catch (Exception e) {
+//
+//            getInt();
+//
+//        }
+//
+//        return getRandomIntInput;
+//
+//    }
+//
+//    public double getDouble(){
+//
+//        System.out.println("Please enter a random number with a floating point: ");
+//
+//        double getRandomDoubleInput = 0.0;
+//
+//
+//        String userInput = scanner.next();
+//
+//        try {
+//
+//            getRandomDoubleInput = Double.valueOf(userInput);
+//
+//        }catch (Exception e){
+//
+//            getDouble();
+//
+//        }
+//
+//        return getRandomDoubleInput;
+//
+//    }
 
 //    public int getInt(){
 //        Scanner scanner = new Scanner(System.in);
@@ -96,4 +154,4 @@ public class Input {
 //        }else return getDouble(min, max);
 //    }
 
-}
+//}
