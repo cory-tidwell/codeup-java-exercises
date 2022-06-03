@@ -1,15 +1,10 @@
-public class Car {
+package carShop;
+
+public class Car extends Customer {
     String make = "Chevrolet";
     String model = "Corvette";
-    int year = 2020;
     String color = "blue";
-
-//    void drive() {
-//        System.out.println("You drive the car");
-//    }
-//    void brake() {
-//        System.out.println("You step on the brakes!");
-//    }
+    int year = 2022;
 
     public String getMake() {
         return make;
@@ -27,14 +22,6 @@ public class Car {
         this.model = model;
     }
 
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
     public String getColor() {
         return color;
     }
@@ -43,4 +30,19 @@ public class Car {
         this.color = color;
     }
 
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public Car(String fName, String lName, String make, String model, String color, int year) {
+        super(fName, lName);
+        this.make = make;
+        this.model = model;
+        this.color = color;
+        this.year = year;
+    }
 }

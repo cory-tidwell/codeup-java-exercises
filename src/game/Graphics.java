@@ -5,6 +5,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Arrays;
 
+import static java.awt.Color.GREEN;
+
 public class Graphics extends JPanel implements ActionListener {
 
     static final int WIDTH = 700;
@@ -61,12 +63,22 @@ public class Graphics extends JPanel implements ActionListener {
         if (checkMark(MARK_O)) {
             return;
         }
+        if (checkDraw()) {
+            return;
+        }
     }
 
-//    protected boolean checkDraw() {
-//        int i = 0;
-//        while (!tiles[i])
-//    }
+    protected boolean checkDraw() {
+        int i = 0;
+        while (!tiles[i].getText().isEmpty()) {
+            if (i == tiles.length - 1) {
+                Arrays.stream(tiles).forEach(t -> t.setEnabled(false));
+                break;
+            }
+            i++;
+        }
+        return i == tiles.length - 1;
+    }
 
     protected boolean checkMark(String mark) {
         boolean isDone = false;
@@ -98,9 +110,9 @@ public class Graphics extends JPanel implements ActionListener {
     }
 
     protected void setWinner(int posA, int posB, int posC) {
-        tiles[posA].setBackground(Color.GREEN);
-        tiles[posB].setBackground(Color.GREEN);
-        tiles[posC].setBackground(Color.GREEN);
+        tiles[posA].setBackground(GREEN);
+        tiles[posB].setBackground(GREEN);
+        tiles[posC].setBackground(GREEN);
 
         Arrays.stream(tiles).forEach(t -> t.setEnabled(false));
 
