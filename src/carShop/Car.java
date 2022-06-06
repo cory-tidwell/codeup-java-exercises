@@ -1,10 +1,10 @@
 package carShop;
 
 public class Car extends Customer {
-    String make = "Chevrolet";
-    String model = "Corvette";
-    String color = "blue";
-    int year = 2022;
+    private String make;
+    private String model;
+    private String color;
+    private int year;
 
     public String getMake() {
         return make;
